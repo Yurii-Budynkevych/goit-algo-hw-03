@@ -19,11 +19,11 @@ def normalize_phone(phone_numbers):
         pattern = r"[^\d+]"
         normalized_number = re.sub(pattern, "", number)
 
-        if normalized_number.find('+') == 0:
+        if normalized_number.startswith('+'):
             pass
-        elif normalized_number.find('380') == 0:
+        elif normalized_number.startswith('380'):
             normalized_number = '+' + normalized_number
-        elif normalized_number.find('0') == 0:
+        elif normalized_number.startswith('0'):
             normalized_number = '+38' + normalized_number     
 
         normalized_list.append(normalized_number)
