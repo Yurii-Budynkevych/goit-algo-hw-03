@@ -7,8 +7,8 @@ def get_days_from_today(date):
     try:
         paresd_date = dt.datetime.strptime(date, '%Y-%m-%d').date()
         delta = NOW - paresd_date
-        print(delta.days, 'days passed')
+        return delta.days
     except Exception as error:
-        print('Error occured:', error, sep=' ')    
+        return error
 
-get_days_from_today(input)    
+print(get_days_from_today(input)) 

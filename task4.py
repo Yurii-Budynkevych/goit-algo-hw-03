@@ -27,7 +27,7 @@ def get_upcoming_birthdays (b_list):
 
         difference = (paresd_birthday - now).days    
         if difference <= 7:
-            in7_days_cograts.append(user['name'])
+            in7_days_cograts.append({"name": user['name'], "congrats_date": paresd_birthday})
 
     return(in7_days_cograts)
 

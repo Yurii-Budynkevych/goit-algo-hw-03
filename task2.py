@@ -2,9 +2,11 @@ import random
 
 def get_numbers_ticket(min, max, quantity=1):
     try:
+        if min < 1 or max > 1000:
+            return []  
         lotery = random.sample(range(min, max+1), quantity)
-        print(lotery)
+        return lotery
     except Exception as error:
-        print('Error occured:', error, sep=' ')    
+        return error 
 
-get_numbers_ticket(1, 1000, 6)
+print(get_numbers_ticket(1, 1000, 6))
