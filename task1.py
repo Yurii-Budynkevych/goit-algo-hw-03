@@ -6,8 +6,6 @@ def get_days_from_today(date):
     try:
         paresd_date = dt.datetime.strptime(date, '%Y-%m-%d').date()
         delta = NOW - paresd_date
-        if delta.days < 0:
-            return "date is in the future" 
         return delta.days
     except Exception as error:
         return error
